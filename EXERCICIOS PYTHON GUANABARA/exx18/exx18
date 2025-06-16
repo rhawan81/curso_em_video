@@ -1,0 +1,10 @@
+import math
+angulo = int(input("Digite o angulo que voce deseja"))
+
+seno = math.sin(math.radians(angulo))
+cosseno = math.cos(math.radians(angulo))
+tangente = math.tan(math.radians(angulo))
+
+print(f"O Angulo  de {angulo} tem o Seno de : {seno :.2f}")
+print(f"O Angulo de {angulo} tem o cosseno de : {cosseno :.2f}")
+print(f"O Angulo  de {angulo} tem o Tangente de : {tangente :.2f}")
