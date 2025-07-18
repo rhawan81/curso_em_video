@@ -1,0 +1,26 @@
+import random
+from time import sleep
+print("""Suas Opções: \n 0.PEDRA\n 1.PAPEL\n 2.TESOURA""")
+escolhado_pc = ('PEDRA','PAPEL', 'TESOURA')
+escolha_pc = random.choice (escolhado_pc)
+escolha_usuario = int(input('qual sua jgoada'))
+jogada_usuario = escolhado_pc[escolha_usuario]
+
+
+if escolha_usuario == 0:
+    print('PEDRA')
+elif escolha_usuario == 1:
+    print('PAPEL')
+elif escolha_usuario == 2:
+    print('TESOURA')
+
+print('O PC ESCOLHEU {} JA VOCE ESCOLHEU {}'.format(escolha_pc , jogada_usuario))          
+
+if escolha_pc == escolha_usuario:
+    print('EMPATE!')
+elif (escolha_usuario == 'PEDRA' and escolha_pc == 'TESOURA') or \
+        (escolha_usuario == 'PAPEL' and escolha_pc == 'PEDRA') or \
+        (escolha_usuario == 'TESOURA' and escolha_pc == 'PAPEL'):
+        print('VOCÊ GANHOU!')
+else:
+    print('O PC GANHOU!')    
