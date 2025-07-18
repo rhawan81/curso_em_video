@@ -1,0 +1,21 @@
+print("-" * 20)
+produto = float(input('Preço das Compras : R$'))
+while True:
+    escolha = int(input('1. A vista / cheque\n 2. a vista cartao\n 3. 2x no cartao\n 4. 3x ou mais no cartao\n Qual e a opcao ? '))
+    if escolha == 1:
+        total = produto - (produto * 10 / 100)
+        break
+    elif escolha == 2:
+        total = produto -(produto * 5 / 100)
+        break
+    elif escolha == 3:
+        total = produto
+        parcela = total / 2
+        break          
+    elif escolha == 4:
+        total = produto + (produto * 20 / 100)
+        totparce = int(input('Quantas parcelas'))
+        parcela = total / totparce
+        print('Sua compra sera parcelada em {}x de {}  COM JUROS'.format(totparce, parcela))
+    print('sua compra de R$ {} vai custar R${} no final.'.format(produto,total))
+    
